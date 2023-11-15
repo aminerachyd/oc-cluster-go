@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os"
 )
 
 type Flags struct {
@@ -16,8 +15,7 @@ type Flags struct {
 
 func Run() {
 	flags := parseFlags()
-	args := os.Args
-	if len(args) < 2 {
+	if flags.arg == "" {
 		fmt.Println("Should have at least one argument")
 		return
 	}
