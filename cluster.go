@@ -109,6 +109,7 @@ func findCluster(clusterName string, clusters []Cluster) (*Cluster, bool) {
 		if c.Name == clusterName {
 			cluster = &c
 			found = true
+			break
 		}
 	}
 
